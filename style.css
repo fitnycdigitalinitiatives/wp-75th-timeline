@@ -1,0 +1,377 @@
+/*
+Theme Name: Timeline Theme
+Theme URI:
+Author: FIT Library Digital Initiatives
+Author URI: https://github.com/fitnycdigitalinitiatives
+Description:  Wordpress theme built for FIT's 75th Anniversary.
+Version: 1.0
+Text Domain: timeline-theme
+Tags: timelines
+*/
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* =General
+-------------------------------------------------------------- */
+body {
+  font-family: "halyard-text", sans-serif;
+  font-weight: 300;
+  position: relative;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: "halyard-micro",sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.1em;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+}
+iframe {
+  width: 100%;
+}
+
+/* Header */
+.navbar-brand img {
+  height: 40px;
+}
+/* Homepage */
+#landing {
+  min-height: calc(100vh - (66px + 40px));
+}
+#decade-navigation {
+  background-color: rgba(255,255,255,.85);
+}
+#decade-navigation .nav-link {
+  font-family: "halyard-micro",sans-serif;
+  font-weight: bold;
+  color: rgba(0,0,0,.5);
+}
+#decade-navigation .nav-link:focus, #decade-navigation .nav-link:hover {
+  color: rgba(0,0,0,.7);
+}
+#decade-navigation .nav-link.active, #decade-navigation .nav-link.active:focus, #decade-navigation .nav-link.active:hover {
+  color: #0036F9;
+}
+#timeline .decade {
+  min-height: 100vh;
+  background-color: #818181;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+#timeline #decade1940s .decade {
+  background-image:
+    /* top, transparent fit green, faked with gradient */
+    linear-gradient(
+      rgba(18, 196, 119, 0.45),
+      rgba(18, 196, 119, 0.45)
+    ),
+    /* bottom, image */
+    url(inc/assets/images/1940s-bg.jpg);
+}
+#timeline #decade1950s .decade {
+  background-image:
+    /* top, transparent fit pink, faked with gradient */
+    linear-gradient(
+      rgba(255, 46, 170, 0.45),
+      rgba(255, 46, 170, 0.45)
+    ),
+    /* bottom, image */
+    url(inc/assets/images/1950s-bg.jpg);
+}
+#timeline #decade1960s .decade {
+  background-image:
+    /* top, transparent fit green, faked with gradient */
+    linear-gradient(
+      rgba(18, 196, 119, 0.45),
+      rgba(18, 196, 119, 0.45)
+    ),
+    /* bottom, image */
+    url(inc/assets/images/1960s-bg.jpg);
+}
+#timeline #decade1970s .decade {
+  background-image:
+    /* top, transparent fit pink, faked with gradient */
+    linear-gradient(
+      rgba(255, 46, 170, 0.45),
+      rgba(255, 46, 170, 0.45)
+    ),
+    /* bottom, image */
+    url(inc/assets/images/1970s-bg.jpg);
+}
+#timeline .decade h1 {
+  font-size: 6rem;
+}
+#timeline .events {
+  position: relative;
+}
+#timeline .events:before {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 10px;
+  height: 100%;
+  background: url(inc/assets/images/stripes.png);
+  background-size: contain;
+  background-repeat: repeat-y;
+  content: '';
+}
+#timeline .event {
+  position: relative;
+}
+#timeline .event:before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  top: 46px;
+  background: url(inc/assets/images/pointer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#timeline .title {
+  font-size: 1.25rem;
+}
+#timeline .date {
+  color: #0036F9;
+  font-weight: bold;
+  font-size: 1rem;
+}
+#timeline .content img, #timeline .content .embed-responsive {
+  margin-bottom: 1rem;
+}
+#timeline .content *:only-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#timeline .content *:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  #decade-navigation .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+@media (min-width: 768px) {
+  #timeline .events:before {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+  }
+  #timeline .event:nth-child(odd) .text{
+    order: 13;
+  }
+  #timeline .event:before {
+    height: 50px;
+    width: 50px;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 992px) {
+  #timeline .title {
+    font-size: 1.5rem;
+  }
+  #timeline .date {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  #timeline .title {
+    font-size: 1.75rem;
+  }
+  #timeline .date {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer */
+#footer-logo:hover {
+  text-decoration: none;
+}
+#footer-logo img {
+  height: 30px;
+}
+#footer-logo span {
+  font-family: "Halyard Text",sans-serif;
+  font-size: 10px;
+}
+@media (min-width: 768px) {
+  #footer-logo span {
+    font-size: 13px;
+  }
+}
+#footer-title {
+  font-family: "Halyard Text",sans-serif;
+  font-weight: 700;
+}
+
+/* =posts
+-------------------------------------------------------------- */
+.wp-block-image {
+  margin-bottom: 1.5rem;
+}
+.entry-footer {
+  clear: both;
+}
+
+/* grid-view */
+#grid-view .card-deck .card h2 {
+  font-size: 2rem;
+}
+@media (min-width: 576px) {
+  #grid-view .card-deck .card {
+    flex: 0 0 calc((100% / 2) - 30px);
+    margin-bottom: 30px;
+  }
+  #grid-view .card-deck .card h2 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  #grid-view .card-deck .card {
+    flex: 0 0 calc((100% / 3) - 30px);
+  }
+  #grid-view .card-deck .card h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  #grid-view .card-deck .card h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  #grid-view .card-deck .card {
+    flex: 0 0 calc((100% / 4) - 30px);
+  }
+  #grid-view .card-deck .card h2 {
+    font-size: 1.75rem;
+  }
+}
+#grid-view .card-deck .card-img {
+  height: auto;
+}
+.nav-previous {
+  float: right;
+}
+.nav-next {
+  float: left;
+}
