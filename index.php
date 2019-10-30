@@ -65,24 +65,20 @@ if( $posts ):
 				<?php	foreach ($grouped_posts as $post) : ?>
 					<?php	setup_postdata($post); ?>
 					<div class="row event align-items-md-center justify-content-md-center py-5">
-						<div class="col-md-6 text px-5">
-							<h3 class="date">
-								<?php	echo get_the_date('Y'); ?>
-							</h3>
-							<h2 class="title">
-								<?php the_title(); ?>
-							</h2>
-
-						</div>
-						<div class="col-md-6 content px-5">
+						<h3 class="date">
+							<?php	echo get_the_date('Y'); ?>
+						</h3>
+						<div class="col-md-6 shadow box">
 							<?php if (has_post_thumbnail()) : ?>
-								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'mx-auto d-block' ) ); ?>
+								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'mx-auto d-block mb-2 w-100' ) ); ?>
 							<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
 								<div class="embed-responsive embed-responsive-16by9">
 									<?php echo $key_1_value; ?>
 								</div>
 							<?php endif; ?>
-							<?php the_content(); ?>
+							<h2 class="title">
+								<?php the_title(); ?>
+							</h2>
 						</div>
 					</div>
 				<?php	endforeach; ?>

@@ -170,6 +170,7 @@ iframe {
   background-position: center;
   background-attachment: fixed;
   color: #fff;
+  box-shadow: inset 0 0 1em #111;
 }
 #timeline #decade1940s .decade {
   background-image:
@@ -220,7 +221,7 @@ iframe {
 #timeline .events:before {
   position: absolute;
   top: 0;
-  left: 12px;
+  left: 22px;
   width: 10px;
   height: 100%;
   background: url(inc/assets/images/stripes.png);
@@ -234,21 +235,34 @@ iframe {
 #timeline .event:before {
   content: "";
   position: absolute;
-  height: 25px;
-  width: 25px;
-  left: 4px;
-  top: 46px;
+  height: 46px;
+  width: 46px;
+  left: 5px;
+  top: calc(50% + 1px);
+  transform: translateY(-50%);
   background: url(inc/assets/images/pointer.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
-#timeline .title {
-  font-size: 1.25rem;
+#timeline .event .box {
+  margin-left: 4.25rem;
+  margin-right: 1rem;
+  padding: 15px;
+}
+#timeline .event .box > *:last-child {
+  margin-bottom: 0;
 }
 #timeline .date {
-  color: #0036F9;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: .75rem;
+  position: absolute;
+  left: 29px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-bottom: 0;
+}
+#timeline .title {
+  font-size: 1.25rem;
 }
 #timeline .content img, #timeline .content .embed-responsive {
   margin-bottom: 1rem;
@@ -269,19 +283,21 @@ iframe {
 }
 @media (min-width: 768px) {
   #timeline .events:before {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15px;
-  }
-  #timeline .event:nth-child(odd) .text{
-    order: 13;
+    left: 24px;
+    width: 13px;
   }
   #timeline .event:before {
-    height: 50px;
-    width: 50px;
-    left: 50%;
-    top: auto;
-    transform: translateX(-50%);
+    height: 62px;
+    width: 62px;
+    left: 0;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+  }
+  #timeline .date {
+    font-size: 1rem;
+    left: 33px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -330,48 +346,4 @@ iframe {
 }
 .entry-footer {
   clear: both;
-}
-
-/* grid-view */
-#grid-view .card-deck .card h2 {
-  font-size: 2rem;
-}
-@media (min-width: 576px) {
-  #grid-view .card-deck .card {
-    flex: 0 0 calc((100% / 2) - 30px);
-    margin-bottom: 30px;
-  }
-  #grid-view .card-deck .card h2 {
-    font-size: 1.75rem;
-  }
-}
-@media (min-width: 768px) {
-  #grid-view .card-deck .card {
-    flex: 0 0 calc((100% / 3) - 30px);
-  }
-  #grid-view .card-deck .card h2 {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 992px) {
-  #grid-view .card-deck .card h2 {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 1200px) {
-  #grid-view .card-deck .card {
-    flex: 0 0 calc((100% / 4) - 30px);
-  }
-  #grid-view .card-deck .card h2 {
-    font-size: 1.75rem;
-  }
-}
-#grid-view .card-deck .card-img {
-  height: auto;
-}
-.nav-previous {
-  float: right;
-}
-.nav-next {
-  float: left;
 }
