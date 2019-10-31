@@ -75,10 +75,15 @@ if( $posts ):
 								<div class="embed-responsive embed-responsive-16by9">
 									<?php echo $key_1_value; ?>
 								</div>
+							<?php elseif ($slider = has_shortcode( $post->post_content, 'espro-slider')) : ?>
+								<?php the_content(); ?>
 							<?php endif; ?>
 							<h2 class="title">
 								<?php the_title(); ?>
 							</h2>
+							<?php if (!$slider) : ?>
+								<?php the_content(); ?>
+							<?php endif; ?>
 						</div>
 					</div>
 				<?php	endforeach; ?>

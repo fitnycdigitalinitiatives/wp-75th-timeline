@@ -264,8 +264,8 @@ iframe {
 #timeline .title {
   font-size: 1.25rem;
 }
-#timeline .event img, #timeline .event .embed-responsive {
-  margin-bottom: 1rem;
+#timeline .event img, #timeline .event .embed-responsive, #timeline .event .flexslider {
+  margin-bottom: .5rem;
 }
 
 @media (max-width: 767px) {
@@ -291,6 +291,10 @@ iframe {
     left: 33px;
     top: 50%;
     transform: translateY(-50%);
+  }
+  #timeline .event .box {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
