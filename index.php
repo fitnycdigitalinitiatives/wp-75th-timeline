@@ -61,29 +61,33 @@ if( $posts ):
 						</h1>
 					</div>
 				</div>
-				<div class="container events py-5">
+				<div class="container events">
 				<?php	foreach ($grouped_posts as $post) : ?>
 					<?php	setup_postdata($post); ?>
-					<div class="row event align-items-md-center justify-content-md-center py-5">
-						<h3 class="date">
-							<?php	echo get_the_date('Y'); ?>
-						</h3>
-						<div class="col-md-6 shadow box">
-							<?php if (has_post_thumbnail()) : ?>
-								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'd-block w-100' ) ); ?>
-							<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
-								<div class="embed-responsive embed-responsive-16by9">
-									<?php echo $key_1_value; ?>
+					<div class="row align-items-md-center justify-content-md-center">
+						<div class="col-md-6 py-5 event">
+							<h3 class="date">
+								<?php	echo get_the_date('Y'); ?>
+							</h3>
+							<div class="card">
+								<?php if (has_post_thumbnail()) : ?>
+									<?php the_post_thumbnail( $size = 'large', array( 'class' => 'card-img-top' ) ); ?>
+								<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
+									<div class="embed-responsive embed-responsive-16by9 card-img-top">
+										<?php echo $key_1_value; ?>
+									</div>
+								<?php elseif (has_shortcode( $post->post_content, 'espro-slider')) : ?>
+									<?php the_content(); ?>
+								<?php endif; ?>
+								<div class="card-body">
+									<h2 class="title">
+										<?php the_title(); ?>
+									</h2>
+									<?php if (!has_shortcode( $post->post_content, 'espro-slider')) : ?>
+										<?php the_content(); ?>
+									<?php endif; ?>
 								</div>
-							<?php elseif ($slider = has_shortcode( $post->post_content, 'espro-slider')) : ?>
-								<?php the_content(); ?>
-							<?php endif; ?>
-							<h2 class="title">
-								<?php the_title(); ?>
-							</h2>
-							<?php if (!$slider) : ?>
-								<?php the_content(); ?>
-							<?php endif; ?>
+							</div>
 						</div>
 					</div>
 				<?php	endforeach; ?>

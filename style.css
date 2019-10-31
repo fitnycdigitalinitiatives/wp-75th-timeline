@@ -215,10 +215,10 @@ iframe {
 #timeline .decade h1 {
   font-size: 6rem;
 }
-#timeline .events {
+#timeline .event {
   position: relative;
 }
-#timeline .events:before {
+#timeline .event:before {
   position: absolute;
   top: 0;
   left: 22px;
@@ -228,11 +228,9 @@ iframe {
   background-size: contain;
   background-repeat: repeat-y;
   content: '';
+  z-index: 10;
 }
-#timeline .event {
-  position: relative;
-}
-#timeline .event:before {
+#timeline .event:after {
   content: "";
   position: absolute;
   height: 46px;
@@ -243,15 +241,9 @@ iframe {
   background: url(inc/assets/images/pointer.png);
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 20;
 }
-#timeline .event .box {
-  margin-left: 4.25rem;
-  margin-right: 1rem;
-  padding: 15px;
-}
-#timeline .event .box > *:last-child {
-  margin-bottom: 0;
-}
+
 #timeline .date {
   font-weight: bold;
   font-size: .75rem;
@@ -260,12 +252,17 @@ iframe {
   top: 50%;
   transform: translateY(-50%);
   margin-bottom: 0;
+  z-index: 30;
+}
+#timeline .event .card {
+  margin-left: 3.25rem;
+  margin-right: .5rem;
+}
+#timeline .event .card .card-body > *:last-child {
+  margin-bottom: 0;
 }
 #timeline .title {
   font-size: 1.25rem;
-}
-#timeline .event img, #timeline .event .embed-responsive, #timeline .event .flexslider {
-  margin-bottom: .5rem;
 }
 
 @media (max-width: 767px) {
@@ -275,24 +272,17 @@ iframe {
   }
 }
 @media (min-width: 768px) {
-  #timeline .events:before {
-    left: 24px;
+  #timeline .event:before {
     width: 13px;
   }
-  #timeline .event:before {
+  #timeline .event:after {
     height: 62px;
     width: 62px;
-    left: 0;
-    top: calc(50% + 1px);
-    transform: translateY(-50%);
   }
   #timeline .date {
     font-size: 1rem;
-    left: 33px;
-    top: 50%;
-    transform: translateY(-50%);
   }
-  #timeline .event .box {
+  #timeline .event .card {
     margin-left: 0;
     margin-right: 0;
   }
