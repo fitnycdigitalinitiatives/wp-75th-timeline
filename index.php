@@ -70,7 +70,7 @@ if( $posts ):
 						</h3>
 						<div class="col-md-6 shadow box">
 							<?php if (has_post_thumbnail()) : ?>
-								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'mx-auto d-block mb-2 w-100' ) ); ?>
+								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'd-block w-100' ) ); ?>
 							<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
 								<div class="embed-responsive embed-responsive-16by9">
 									<?php echo $key_1_value; ?>

@@ -264,15 +264,8 @@ iframe {
 #timeline .title {
   font-size: 1.25rem;
 }
-#timeline .content img, #timeline .content .embed-responsive {
+#timeline .event img, #timeline .event .embed-responsive {
   margin-bottom: 1rem;
-}
-#timeline .content *:only-child {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-#timeline .content *:last-child {
-  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
