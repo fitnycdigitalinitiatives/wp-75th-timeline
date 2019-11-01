@@ -61,14 +61,14 @@ if( $posts ):
 						</h1>
 					</div>
 				</div>
-				<div class="container events">
+				<div class="container events py-5">
 				<?php	foreach ($grouped_posts as $post) : ?>
 					<?php	setup_postdata($post); ?>
-					<div class="row align-items-md-center justify-content-md-center">
-						<div class="col-md-6 event">
-							<h3 class="date">
-								<?php	echo get_the_date('Y'); ?>
-							</h3>
+					<div class="row align-items-sm-center justify-content-sm-center event py-5">
+						<div class="date d-flex align-items-center justify-content-center">
+							<h3><?php	echo get_the_date('Y'); ?></h3>
+						</div>
+						<div class="col-sm-9 col-md-8 col-lg-6">
 							<div class="card shadow border-0 rounded-0">
 								<?php if (has_post_thumbnail()) : ?>
 									<?php the_post_thumbnail( $size = 'large', array( 'class' => 'card-img-top rounded-0' ) ); ?>
