@@ -64,7 +64,7 @@ if( $posts ):
 				<div class="container events py-5">
 				<?php	foreach ($grouped_posts as $post) : ?>
 					<?php	setup_postdata($post); ?>
-					<div class="row align-items-sm-center justify-content-sm-center event py-5">
+					<div class="row align-items-sm-center justify-content-sm-center event py-4">
 						<div class="date d-flex align-items-center justify-content-center">
 							<h3><?php	echo get_the_date('Y'); ?></h3>
 						</div>
