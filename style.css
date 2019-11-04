@@ -297,7 +297,7 @@ iframe {
 #timeline .event .image, #timeline .event .text {
   margin-left: 60px;
 }
-#timeline .event .card .card-body > *:last-child, #timeline .event .card .flexslider {
+#timeline .event .text > *:last-child, #timeline .event .image .flexslider {
   margin-bottom: 0;
 }
 #timeline .title {

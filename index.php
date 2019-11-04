@@ -68,7 +68,7 @@ if( $posts ):
 						<div class="date d-flex align-items-center justify-content-center">
 							<h3><?php	echo get_the_date('Y'); ?></h3>
 						</div>
-						<div class="col-md-5 image">
+						<div class="col-sm-9 col-md-5 pb-2 pb-md-0 image">
 								<?php if (has_post_thumbnail()) : ?>
 									<?php the_post_thumbnail( $size = 'large', array( 'class' => 'card-img-top rounded-0' ) ); ?>
 								<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
@@ -79,7 +79,7 @@ if( $posts ):
 									<?php the_content(); ?>
 								<?php endif; ?>
 						</div>
-						<div class="col-md-5 text">
+						<div class="col-sm-9  col-md-5 text">
 							<h2 class="title">
 								<?php the_title(); ?>
 							</h2>
