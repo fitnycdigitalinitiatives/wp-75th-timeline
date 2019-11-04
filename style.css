@@ -294,9 +294,8 @@ iframe {
   margin: 0;
   padding-bottom: 2px;
 }
-#timeline .event .card {
+#timeline .event .image, #timeline .event .text {
   margin-left: 60px;
-  position: relative;
 }
 #timeline .event .card .card-body > *:last-child, #timeline .event .card .flexslider {
   margin-bottom: 0;
@@ -311,7 +310,7 @@ iframe {
   #timeline .date {
     left: 0;
   }
-  #timeline .event .card {
+  #timeline .event .image, #timeline .event .text {
     margin-left: 0;
     margin-right: 0;
   }

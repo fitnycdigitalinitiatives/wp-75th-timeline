@@ -68,8 +68,7 @@ if( $posts ):
 						<div class="date d-flex align-items-center justify-content-center">
 							<h3><?php	echo get_the_date('Y'); ?></h3>
 						</div>
-						<div class="col-sm-9 col-md-8 col-lg-6">
-							<div class="card shadow border-0 rounded-0">
+						<div class="col-md-5 image">
 								<?php if (has_post_thumbnail()) : ?>
 									<?php the_post_thumbnail( $size = 'large', array( 'class' => 'card-img-top rounded-0' ) ); ?>
 								<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
@@ -79,15 +78,14 @@ if( $posts ):
 								<?php elseif (has_shortcode( $post->post_content, 'espro-slider')) : ?>
 									<?php the_content(); ?>
 								<?php endif; ?>
-								<div class="card-body">
-									<h2 class="title">
-										<?php the_title(); ?>
-									</h2>
-									<?php if (!has_shortcode( $post->post_content, 'espro-slider')) : ?>
-										<?php the_content(); ?>
-									<?php endif; ?>
-								</div>
-							</div>
+						</div>
+						<div class="col-md-5 text">
+							<h2 class="title">
+								<?php the_title(); ?>
+							</h2>
+							<?php if (!has_shortcode( $post->post_content, 'espro-slider')) : ?>
+								<?php the_content(); ?>
+							<?php endif; ?>
 						</div>
 					</div>
 				<?php	endforeach; ?>
