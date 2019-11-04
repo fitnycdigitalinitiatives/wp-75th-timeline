@@ -61,25 +61,32 @@ if( $posts ):
 						</h1>
 					</div>
 				</div>
-				<div class="container events py-5">
+				<div class="container events py-4">
 				<?php	foreach ($grouped_posts as $post) : ?>
 					<?php	setup_postdata($post); ?>
-					<div class="row align-items-sm-center justify-content-sm-center event py-4">
+					<div class="row align-items-sm-center justify-content-center justify-content-md-between event py-4">
 						<div class="date d-flex align-items-center justify-content-center">
 							<h3><?php	echo get_the_date('Y'); ?></h3>
 						</div>
-						<div class="col-sm-9 col-md-5 pb-2 pb-md-0 image">
-								<?php if (has_post_thumbnail()) : ?>
-									<?php the_post_thumbnail( $size = 'large', array( 'class' => 'card-img-top rounded-0' ) ); ?>
-								<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
-									<div class="embed-responsive embed-responsive-16by9 card-img-top">
-										<?php echo $key_1_value; ?>
-									</div>
-								<?php elseif (has_shortcode( $post->post_content, 'espro-slider')) : ?>
-									<?php the_content(); ?>
-								<?php endif; ?>
-						</div>
-						<div class="col-sm-9  col-md-5 text">
+						<?php if (has_post_thumbnail()) : ?>
+							<div class="col-sm-9 col-md-5 image pb-md-3 bg-white">
+								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'w-100' ) ); ?>
+							</div>
+						<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
+							<div class="col-sm-9 col-md-5 image pb-md-3 bg-white">
+								<div class="embed-responsive embed-responsive-16by9 card-img-top">
+									<?php echo $key_1_value; ?>
+								</div>
+							</div>
+						<?php elseif (has_shortcode( $post->post_content, 'espro-slider')) : ?>
+							<div class="col-sm-9 col-md-5 image pb-md-3 bg-white">
+								<?php the_content(); ?>
+							</div>
+						<?php else: ?>
+							<div class="col-sm-9 col-md-5 image blank m-0 p-0">
+							</div>
+						<?php endif; ?>
+						<div class="col-sm-9 col-md-5 text p-md-3 bg-white">
 							<h2 class="title">
 								<?php the_title(); ?>
 							</h2>
