@@ -53,7 +53,7 @@ if( $posts ):
 
 	<div id="timeline">
 		<?php	foreach ($grouped as $decade => $grouped_posts) : ?>
-			<div id="decade<?php echo $decade; ?>">
+			<div id="decade<?php echo $decade; ?>" class="decade-box">
 				<div class="container-fluid">
 					<div class="row decade align-items-center justify-content-center">
 						<h1>
@@ -61,32 +61,32 @@ if( $posts ):
 						</h1>
 					</div>
 				</div>
-				<div class="container events py-5">
+				<div class="container events py-1 py-md-5">
 				<?php	foreach ($grouped_posts as $post) : ?>
 					<?php	setup_postdata($post); ?>
-					<div class="row align-items-sm-center justify-content-center justify-content-md-between event py-4">
+					<div class="row align-items-sm-center justify-content-center justify-content-md-between event my-5 my-md-0 py-md-4">
 						<div class="date d-flex align-items-center justify-content-center">
 							<h3><?php	echo get_the_date('Y'); ?></h3>
 						</div>
 						<?php if (has_post_thumbnail()) : ?>
-							<div class="col-sm-9 col-md-5 image p-md-3 p-xl-4 bg-white">
+							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
 								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'w-100' ) ); ?>
 							</div>
 						<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
-							<div class="col-sm-9 col-md-5 image p-md-3 p-xl-4 bg-white">
+							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
 								<div class="embed-responsive embed-responsive-16by9 card-img-top">
 									<?php echo $key_1_value; ?>
 								</div>
 							</div>
 						<?php elseif (has_shortcode( $post->post_content, 'espro-slider')) : ?>
-							<div class="col-sm-9 col-md-5 image p-md-3 p-xl-4 bg-white">
+							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
 								<?php the_content(); ?>
 							</div>
 						<?php else: ?>
-							<div class="col-sm-9 col-md-5 image blank m-0 p-0">
+							<div class="col-md-5 image blank m-0 p-0">
 							</div>
 						<?php endif; ?>
-						<div class="col-sm-9 col-md-5 text p-md-3 p-xl-4 bg-white">
+						<div class="col-md-5 text p-md-3 p-xl-4 bg-white">
 							<h2 class="title">
 								<?php the_title(); ?>
 							</h2>

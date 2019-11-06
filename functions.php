@@ -96,7 +96,6 @@ function wp_bootstrap_starter_scripts() {
 	// load bootstrap js
   wp_enqueue_script('timeline-theme-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(), '', true );
 	wp_enqueue_script('timeline-theme-bootstrapjs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array(), '', true );
-  wp_enqueue_script('timeline-theme-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.min.js', array(), '', true );
 	wp_enqueue_script( 'timeline-theme-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 	if ( is_home() ) {
 		wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/inc/assets/js/smooth-scroll.js', array(), '', true );
