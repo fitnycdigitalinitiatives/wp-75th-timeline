@@ -101,9 +101,6 @@ function wp_bootstrap_starter_scripts() {
 	if ( is_home() && wp_is_mobile() ) {
 		wp_enqueue_script( 'theme', get_template_directory_uri() . '/inc/assets/js/fullscreenresize.js', array(), '', true );
 	}
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
 
@@ -145,42 +142,3 @@ function timeline_remove_sections( $wp_customize ) {
 		$wp_customize->remove_section( 'title_tagline' );
 }
 add_action( 'customize_register', 'timeline_remove_sections' );
-
-function timeline_customizer_register($wp_customize) {
-	//TIMELINE DIVIDER
-	function timeline_sanitize_divider( $input ) {
-	    $valid = array(
-	        'Year' => 'Year',
-	        'Decade' => 'Decade'
-	    );
-
-	    if ( array_key_exists( $input, $valid ) ) {
-	        return $input;
-	    } else {
-	        return '';
-	    }
-	}
-
-	//ADD GENERAL SECTION
-	$wp_customize->add_section( 'timeline_customizer_timeline_section', array(
-		'title' => __( 'Timeline Settings', 'timeline' ),
-		'priority' => 1
-	));
-
-	//TIMELINE DIVIDER
-	$wp_customize->add_setting('timeline_customizer_divider', array(
-			'capability'     => 'edit_theme_options',
-			'default'        => 'Decade',
-			'sanitize_callback' => 'timeline_sanitize_divider'
-	));
-	$wp_customize->add_control( 'timeline_customizer_divider', array(
-			'label'   => __('Timeline Divider','timeline'),
-			'section' => 'timeline_customizer_timeline_section',
-			'type'    => 'select',
-			'choices' => array('Year' => 'Year','Decade' => 'Decade'),
-			'settings' => 'timeline_customizer_divider',
-			'priority' => 1
-	));
-}
-
-add_action( 'customize_register', 'timeline_customizer_register' );

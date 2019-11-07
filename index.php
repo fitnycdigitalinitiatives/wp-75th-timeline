@@ -74,7 +74,7 @@ if( $posts ):
 							</div>
 						<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
-								<div class="embed-responsive embed-responsive-16by9 card-img-top">
+								<div class="embed-responsive embed-responsive-16by9">
 									<?php echo $key_1_value; ?>
 								</div>
 							</div>
