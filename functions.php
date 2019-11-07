@@ -80,8 +80,6 @@ function wp_bootstrap_starter_scripts() {
 	wp_enqueue_style( 'timeline-theme-bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' );
 	// load halyard font from typekit
 	wp_enqueue_style( 'halyard', 'https://use.typekit.net/xki7blh.css' );
-  // materialicons cdn
-  wp_enqueue_style( 'timeline-theme-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons' );
 	// fontawesome
   wp_enqueue_style( 'timeline-theme-fontawesome', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 	// load Timeline Theme styles
@@ -98,9 +96,11 @@ function wp_bootstrap_starter_scripts() {
 	wp_enqueue_script('timeline-theme-bootstrapjs', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array(), '', true );
 	wp_enqueue_script( 'timeline-theme-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 	if ( is_home() ) {
-		wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/inc/assets/js/theme.js', array(), '', true );
+		wp_enqueue_script( 'theme', get_template_directory_uri() . '/inc/assets/js/smooth-scroll.js', array(), '', true );
 	}
-
+	if ( is_home() && wp_is_mobile() ) {
+		wp_enqueue_script( 'theme', get_template_directory_uri() . '/inc/assets/js/fullscreenresize.js', array(), '', true );
+	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
