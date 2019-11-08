@@ -13,7 +13,7 @@ $(window).resize(function() {
 
 function doneResizing(){
   var currentHeight = window.innerHeight;
-  if (((currentHeight - initialHeight) > 100) || ((currentHeight - initialHeight) < -100)) {
+  if (((currentHeight - initialHeight) > 200) || ((currentHeight - initialHeight) < -200)) {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
