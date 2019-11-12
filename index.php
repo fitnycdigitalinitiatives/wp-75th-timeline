@@ -14,17 +14,12 @@
 
 get_header(); ?>
 
-<!-- fallback for react 100vh
 	<div class="container-fluid">
 		<div class="row align-items-center justify-content-center py-5" id="landing">
 			<div class="col-sm-8 col-md-6 col-lg-4">
 				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-anniversary-logo-master.png'; ?>" alt="FIT 75th Anniversary Logo">
 			</div>
 		</div>
-	</div>
--->
-
-	<div id="react100vh">
 	</div>
 
 

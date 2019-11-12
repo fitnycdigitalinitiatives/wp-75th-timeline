@@ -97,7 +97,6 @@ function wp_bootstrap_starter_scripts() {
 	wp_enqueue_script( 'timeline-theme-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 	if ( is_home() ) {
 		wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/inc/assets/js/smooth-scroll.js', array(), '', true );
-		wp_enqueue_script( '100vh', get_template_directory_uri() . '/inc/assets/js/100vh.js', array(), '', true );
 	}
 	if ( is_home() && wp_is_mobile() ) {
 		wp_enqueue_script( 'full-screen-resize', get_template_directory_uri() . '/inc/assets/js/fullscreenresize.js', array(), '', true );
