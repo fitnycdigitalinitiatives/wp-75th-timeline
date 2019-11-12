@@ -151,7 +151,6 @@ iframe {
 /* Homepage */
 #landing {
   min-height: calc(100vh - (66px + 40px)); /* Use vh as a fallback for browsers that do not support Custom Properties */
-  min-height: calc((var(--vh, 1vh) * 100) - (66px + 40px));
   transition: min-height 0.1s linear; /* Prevents jumpiness */
 }
 #decade-navigation {

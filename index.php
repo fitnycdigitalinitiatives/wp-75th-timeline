@@ -63,7 +63,10 @@ if( $posts ):
 				</div>
 				<div class="container events py-1 py-md-5">
 				<?php	foreach ($grouped_posts as $post) : ?>
-					<?php	setup_postdata($post); ?>
+					<?php
+						setup_postdata($post);
+						$title = the_title(null, null, false);
+					?>
 					<div class="row align-items-sm-center justify-content-center justify-content-md-between event my-5 my-md-0 py-md-4">
 						<div class="date d-flex align-items-center justify-content-center">
 							<h3><?php	echo get_the_date('Y'); ?></h3>
@@ -88,19 +91,19 @@ if( $posts ):
 						<?php endif; ?>
 						<div class="col-md-5 text p-md-3 p-xl-4 bg-white">
 							<h2 class="title">
-								<?php the_title(); ?>
+								<?php echo $title; ?>
 							</h2>
 							<?php if (!has_shortcode( $post->post_content, 'espro-slider')) : ?>
 								<?php the_content(); ?>
 							<?php endif; ?>
 						</div>
 					</div>
+					<?php	wp_reset_postdata(); ?>
 				<?php	endforeach; ?>
 				</div>
 			</div>
 		<?php	endforeach; ?>
 	</div>
-	<?php	wp_reset_postdata(); ?>
 
 <?php endif; ?>
 <?php
