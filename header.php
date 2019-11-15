@@ -30,9 +30,6 @@
   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'timeline-theme' ); ?></a>
   <header class="flex-shrink-0">
     <nav class="navbar navbar-light navbar-expand-lg">
-      <a class="navbar-brand" href="<?php echo home_url(); ?>">
-        <img class="mr-0 mr-md-1" src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-anniversary-strip-lockup.png'; ?>" alt="Museum at FIT Logo"/>
-      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

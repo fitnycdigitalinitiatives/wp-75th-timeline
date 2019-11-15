@@ -11,52 +11,52 @@
 
 ?>
 	</main><!-- #content -->
-	<footer class="mt-auto py-5 text-white text-center text-md-left">
+	<footer class="mt-auto py-5 text-white text-center">
 	  <div class="container">
-	    <div class="row align-items-center justify-content-between">
-	    	<div class="col-md-7 mb-3 mb-md-0">
-					<a class="text-dark d-inline-block mb-3" href="https://www.fitnyc.edu/" id="footer-logo">
+			<div class="row justify-content-center" >
+				<div class="col-12 mb-4" id="unconventional">
+					<h1 class="text-white font-weight-bold">
+						un<span class="grey">conventional</span> then<br class="d-md-none"><span class="d-none d-md-inline">...</span>un<span class="grey" id="flip">conventional</span> now
+					</h1>
+				</div>
+	    	<div class="col-md-6 col-lg-5 col-xl-4">
+					<a class="text-dark d-inline-block mb-4" href="https://www.fitnyc.edu/" id="footer-logo">
 	          <img src="<?php echo get_template_directory_uri() . '/inc/assets/images/fit-wordmark.png'; ?>" alt="FIT SUNY Logo">
 	        </a>
-					<address>
+					<address class="mb-4">
 						227 West 27th Street
 						<br>
 						New York City 10001-5992
 						<br>
 						<a class="text-white" href="tel:212-217-7999">(212) 217-7999</a>
 					</address>
-					<p class="mb-0" id="copyright">
-						&copy;<?php echo date("Y"); ?> Fashion Institute of Technology
-					</p>
-	    	</div>
-				<div class="col-md-5 col-lg-4">
 					<ul class="list-inline" id="social">
 			      <li class="list-inline-item">
 							<a class="text-white" href="https://www.instagram.com/fitnyc/" aria-label="FIT Instagram">
-								<i class="fab fa-instagram fa-lg" aria-hidden="" title="FIT Instagram"></i>
+								<i class="fab fa-instagram fa-2x" aria-hidden="" title="FIT Instagram"></i>
 							</a>
 						</li>
 						<li class="list-inline-item">
 							<a class="text-white" href="https://www.facebook.com/FashionInstituteofTechnology" aria-label="FIT Facebook">
-								<i class="fab fa-facebook fa-lg" aria-hidden="" title="FIT Facebook"></i>
+								<i class="fab fa-facebook fa-2x" aria-hidden="" title="FIT Facebook"></i>
 							</a>
 						</li>
 						<li class="list-inline-item">
 							<a class="text-white" href="https://twitter.com/FIT" aria-label="FIT Twitter">
-								<i class="fab fa-twitter fa-lg" aria-hidden="" title="FIT Twitter"></i>
+								<i class="fab fa-twitter fa-2x" aria-hidden="" title="FIT Twitter"></i>
 							</a>
 						</li>
 						<li class="list-inline-item">
 							<a class="text-white" href="https://news.fitnyc.edu/events/" aria-label="FIT Calendar of Events">
-								<i class="fas fa-calendar fa-lg" aria-hidden="" title="FIT Calendar of Events"></i>
+								<i class="fas fa-calendar fa-2x" aria-hidden="" title="FIT Calendar of Events"></i>
 							</a>
 						</li>
 			    </ul>
-					<p class="mb-1 font-weight-bold">
-						75th Anniversary Timeline
-					</p>
-					<p class="mb-0">
+					<p>
 						This site is an initiative of FIT Communications and External Relations and the <a class="text-white" href="https://www.fitnyc.edu/library/">FIT Library</a>.
+					</p>
+					<p class="mb-0" id="copyright">
+						&copy;<?php echo date("Y"); ?> Fashion Institute of Technology
 					</p>
 	    	</div>
 	    </div>
