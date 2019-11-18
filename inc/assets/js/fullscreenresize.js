@@ -4,7 +4,7 @@ var initialHeight = window.innerHeight
 let vh = initialHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
-document.getElementById("landing").style.minHeight = "calc((var(--vh, 1vh) * 100) - (66px + 40px))";
+document.getElementById("landing").style.minHeight = "calc((var(--vh, 1vh) * 100) - (56px + 40px))";
 
 var id;
 $(window).resize(function() {

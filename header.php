@@ -29,7 +29,7 @@
 <div id="page" class="site d-flex flex-column h-100">
   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'timeline-theme' ); ?></a>
   <header class="flex-shrink-0">
-    <nav class="navbar navbar-light navbar-expand-lg">
+    <nav class="navbar navbar-light navbar-expand-md">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

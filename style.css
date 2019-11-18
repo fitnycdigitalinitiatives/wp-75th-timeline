@@ -234,7 +234,9 @@ iframe {
     linear-gradient(
       rgba(255, 46, 170, 0.45),
       rgba(255, 46, 170, 0.45)
-    );
+    ),
+    /* bottom, image */
+    url(inc/assets/images/1980s-bg.jpg);
 }
 #timeline #decade1990s .decade {
   background-image:
@@ -242,7 +244,9 @@ iframe {
     linear-gradient(
       rgba(18, 196, 119, 0.45),
       rgba(18, 196, 119, 0.45)
-    );
+    ),
+    /* bottom, image */
+    url(inc/assets/images/1990s-bg.jpg);
 }
 #timeline #decade2000s .decade {
   background-image:
@@ -250,7 +254,9 @@ iframe {
     linear-gradient(
       rgba(0, 54, 249, 0.45),
       rgba(0, 54, 249, 0.45)
-    );
+    ),
+    /* bottom, image */
+    url(inc/assets/images/2000s-bg.jpg);
 }
 #timeline #decade2010s .decade {
   background-image:
@@ -258,7 +264,9 @@ iframe {
     linear-gradient(
       rgba(255, 46, 170, 0.45),
       rgba(255, 46, 170, 0.45)
-    );
+    ),
+    /* bottom, image */
+    url(inc/assets/images/2010s-bg.jpg);
 }
 #timeline .decade:before {
   position: absolute;
