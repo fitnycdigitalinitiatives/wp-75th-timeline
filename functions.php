@@ -98,6 +98,9 @@ function wp_bootstrap_starter_scripts() {
 	if ( is_home() ) {
 		wp_enqueue_script( 'smooth-scroll', get_template_directory_uri() . '/inc/assets/js/smooth-scroll.js', array(), '', true );
 	}
+	if ( is_home() ) {
+		wp_enqueue_script( 'img-modal', get_template_directory_uri() . '/inc/assets/js/img-modal.js', array(), '', true );
+	}
 	if ( is_home() && wp_is_mobile() ) {
 		wp_enqueue_script( 'full-screen-resize', get_template_directory_uri() . '/inc/assets/js/fullscreenresize.js', array(), '', true );
 	}
