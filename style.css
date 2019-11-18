@@ -366,21 +366,13 @@ iframe {
   padding: 15px;
   padding-bottom: 0;
 }
-#timeline .event .image .popup {
-  cursor: zoom-in;
-}
-#timeline .event .image .modal-content {
-  width: initial;
-  max-width: 100%;
-  max-height: 90vh;
-  margin: auto;
-}
 #timeline .event .text {
   padding: 15px;
 }
 #timeline .event .text > *:last-child, #timeline .event .image .flexslider {
   margin-bottom: 0;
 }
+
 #timeline .event .text {
   font-size: .75rem;
 }

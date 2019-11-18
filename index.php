@@ -73,14 +73,7 @@ if( $posts ):
 						</div>
 						<?php if (has_post_thumbnail()) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
-								<?php $hash = hash("md4", $title); ?>
-								<?php the_post_thumbnail( $size = 'medium_large', array( 'class' => 'w-100 popup', 'data-toggle' => 'modal', 'data-target' => '#post_'. $hash) ); ?>
-								<div class="modal fade" id="post_<?php echo $hash; ?>" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" data-url="<?php echo get_the_post_thumbnail_url($post, 'full'); ?>">
-								  <div class="modal-dialog modal-dialog-centered modal-xl">
-										<img class="modal-content">
-								  </div>
-								</div>
-
+								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'w-100' ) ); ?>
 							</div>
 						<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
