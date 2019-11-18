@@ -45,7 +45,7 @@ if( $posts ):
 		<ul class="nav nav-justified">
 		<?php	foreach ($grouped as $decade => $grouped_posts) : ?>
 			<li class="nav-item">
-		    <a class="nav-link scroll-link" href="#decade<?php echo $decade; ?>"><?php	echo substr_replace($decade, '\'', -1, 0); ?></a>
+		    <a class="nav-link scroll-link" href="#decade<?php echo $decade; ?>"><?php	echo $decade; ?></a>
 		  </li>
 		<?php	endforeach; ?>
 		</ul>
@@ -57,7 +57,7 @@ if( $posts ):
 				<div class="container-fluid">
 					<div class="row decade align-items-center justify-content-center">
 						<h1>
-							<?php	echo substr_replace($decade, '\'', -1, 0); ?>
+							<?php	echo $decade; ?>
 						</h1>
 					</div>
 				</div>
