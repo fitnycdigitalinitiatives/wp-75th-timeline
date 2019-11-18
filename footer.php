@@ -16,7 +16,7 @@
 			<div class="row justify-content-center" >
 				<div class="col-12 mb-4" id="unconventional">
 					<h1 class="text-white font-weight-bold">
-						un<span class="grey">conventional</span> then<br class="d-md-none"><span class="d-none d-md-inline">...</span>un<span class="grey" id="flip">conventional</span> now
+						un<span class="grey">conventional</span> then<br>un<span class="grey" id="flip">conventional</span> now
 					</h1>
 				</div>
 	    	<div class="col-md-6 col-lg-5 col-xl-4">
