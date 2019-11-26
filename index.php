@@ -15,9 +15,13 @@
 get_header(); ?>
 
 	<div class="container-fluid">
-		<div class="row align-items-center justify-content-center py-5" id="landing">
-			<div class="col-sm-8 col-md-6 col-lg-4">
-				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-anniversary-logo-master.png'; ?>" alt="FIT 75th Anniversary Logo">
+		<div class="row align-items-center justify-content-center py-2 py-sm-3" id="landing">
+			<div class="col-sm-10 d-none d-sm-block">
+				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-minds.png'; ?>" alt="FIT 75th Anniversary Celebrating unconventional minds">
+			</div>
+			<div class="col-11 d-sm-none">
+				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-SUNY.png'; ?>" alt="FIT 75th Anniversary">
+				<img class="img-responsive mt-4"src="<?php echo get_template_directory_uri() . '/inc/assets/images/celebrating.png'; ?>" alt="Celebrating unconventional minds">
 			</div>
 		</div>
 	</div>
