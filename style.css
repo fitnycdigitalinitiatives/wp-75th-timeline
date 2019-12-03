@@ -377,12 +377,15 @@ iframe {
 #timeline .event .text {
   padding: 15px;
 }
-#timeline .event .text > *:last-child, #timeline .event .image .flexslider {
+#timeline .event .image .flexslider {
+  margin-bottom: .5rem;
+}
+#timeline .event .text > *:last-child, #timeline .event .image > *:last-child{
   margin-bottom: 0;
 }
 
 #timeline .event .text {
-  font-size: .75rem;
+  font-size: .85rem;
 }
 #timeline .title {
   font-size: 1rem;

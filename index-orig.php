@@ -39,10 +39,12 @@ if( $posts ):
 <?php	$grouped = array(); ?>
 <?php	foreach ( $posts as $post ) : ?>
 	<?php
-	$decade = substr_replace(get_the_date('Y', $post),'0s',3);
+	setup_postdata( $post );
+	$decade = substr_replace(get_the_date('Y'),'0s',3);
 	$grouped[$decade][]	= $post;
 	?>
 <?php	endforeach; ?>
+<?php	wp_reset_postdata(); ?>
 	<nav class="sticky-top" id="decade-navigation">
 		<ul class="nav nav-justified">
 		<?php	foreach ($grouped as $decade => $grouped_posts) : ?>
@@ -64,30 +66,28 @@ if( $posts ):
 					</div>
 				</div>
 				<div class="container events py-1 py-md-5">
-				<?php	foreach ($grouped_posts as $single_post) : ?>
+				<?php	foreach ($grouped_posts as $post) : ?>
 					<?php
-						$title = get_the_title($single_post);
-						$content = get_the_content( null, false, $single_post );
-						$content = apply_filters( 'the_content', $content );
-						$content = str_replace( ']]>', ']]&gt;', $content );
+						setup_postdata($post);
+						$title = the_title(null, null, false);
 					?>
 					<div class="row align-items-sm-center justify-content-center justify-content-md-between event my-5 my-md-0 py-md-4">
 						<div class="date d-flex align-items-center justify-content-center">
-							<h3><?php	echo get_the_date('Y', $single_post); ?></h3>
+							<h3><?php	echo get_the_date('Y'); ?></h3>
 						</div>
-						<?php if (has_post_thumbnail($single_post)) : ?>
+						<?php if (has_post_thumbnail()) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
-								<?php echo get_the_post_thumbnail( $single_post, $size = 'large', array( 'class' => 'w-100' ) ); ?>
+								<?php the_post_thumbnail( $size = 'large', array( 'class' => 'w-100' ) ); ?>
 							</div>
-						<?php elseif ((has_post_format( 'video', $single_post )) && ($key_1_value = get_post_meta( $single_post->ID, 'video', true ))) : ?>
+						<?php elseif ((has_post_format( 'video' )) && ($key_1_value = get_post_meta( get_the_ID(), 'video', true ))) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
 								<div class="embed-responsive embed-responsive-16by9">
 									<?php echo $key_1_value; ?>
 								</div>
 							</div>
-						<?php elseif (has_shortcode( $single_post->post_content, 'espro-slider') || has_block( 'gallery', $single_post )) : ?>
+						<?php elseif (has_shortcode( $post->post_content, 'espro-slider')) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
-								<?php echo $content; ?>
+								<?php the_content(); ?>
 							</div>
 						<?php else: ?>
 							<div class="col-md-5 image blank m-0 p-0">
@@ -97,11 +97,12 @@ if( $posts ):
 							<h2 class="title">
 								<?php echo $title; ?>
 							</h2>
-							<?php if (!(has_shortcode( $single_post->post_content, 'espro-slider') || has_block( 'gallery', $single_post ))) : ?>
-								<?php echo $content; ?>
+							<?php if (!has_shortcode( $post->post_content, 'espro-slider')) : ?>
+								<?php the_content(); ?>
 							<?php endif; ?>
 						</div>
 					</div>
+					<?php	wp_reset_postdata(); ?>
 				<?php	endforeach; ?>
 				</div>
 			</div>

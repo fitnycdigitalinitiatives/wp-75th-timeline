@@ -15,8 +15,9 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <!-- Icon -->
+    <link rel="icon" href="<?php echo get_template_directory_uri() . '/inc/assets/images/favicon.ico'; ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/inc/assets/images/favicon.ico'; ?>" type="image/x-icon">
 <?php wp_head(); ?>
 </head>
 
