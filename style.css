@@ -383,7 +383,39 @@ iframe {
 #timeline .event .text > *:last-child, #timeline .event .image > *:last-child{
   margin-bottom: 0;
 }
-
+#timeline .event .image .modal-button {
+  padding: 0;
+  border: none;
+  background-color: none;
+}
+#timeline .event .image .modal-button:focus {
+  outline: none;
+}
+.modal-backdrop.show {
+  opacity: .75;
+}
+#timeline .event .modal-content {
+  background-color: initial;
+  border: none;
+}
+#timeline .event .modal-header {
+  border: none;
+  padding: 0;
+}
+#timeline .event .modal-header .close {
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+  font-size: 2.5rem;
+  padding: 0;
+}
+#timeline .event .modal-header .close:hover {
+  color: #fff;
+}
+#timeline .event .modal-body img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
 #timeline .event .text {
   font-size: .85rem;
 }

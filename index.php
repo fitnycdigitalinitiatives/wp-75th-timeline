@@ -76,9 +76,32 @@ if( $posts ):
 							<h3><?php	echo get_the_date('Y', $single_post); ?></h3>
 						</div>
 						<?php if (has_post_thumbnail($single_post)) : ?>
-							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
-								<?php echo get_the_post_thumbnail( $single_post, $size = 'large', array( 'class' => 'w-100' ) ); ?>
-							</div>
+							<?php if (get_theme_mod('timeline_customizer_images','No') == 'Yes'): ?>
+								<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
+									<?php $hash = hash("md4", $title); ?>
+									<button type="button" class="modal-button w-100" data-toggle="modal" data-target="#post_<?php echo $hash; ?>">
+										<?php echo get_the_post_thumbnail( $single_post, $size = 'large', array( 'class' => 'w-100' ) ); ?>
+									</button>
+									<div class="modal fade" id="post_<?php echo $hash; ?>" data-fullsize="<?php echo get_the_post_thumbnail_url($single_post, 'full'); ?>" tabindex="-1" role="dialog" aria-label="Label_<?php echo $title; ?>" aria-hidden="true" data-backdrop="true">
+									  <div class="modal-dialog modal-xl modal-dialog-centered">
+									    <div class="modal-content">
+												<div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									          <span aria-hidden="true">&times;</span>
+									        </button>
+									      </div>
+									      <div class="modal-body">
+									        <img alt="<?php echo $title; ?>">
+									      </div>
+									    </div>
+									  </div>
+									</div>
+								</div>
+							<?php else: ?>
+								<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
+									<?php echo get_the_post_thumbnail( $single_post, $size = 'large', array( 'class' => 'w-100', 'data-fullsize' => get_the_post_thumbnail_url($single_post, 'full') ) ); ?>
+								</div>
+							<?php endif; ?>
 						<?php elseif ((has_post_format( 'video', $single_post )) && ($key_1_value = get_post_meta( $single_post->ID, 'video', true ))) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
 								<div class="embed-responsive embed-responsive-16by9">
