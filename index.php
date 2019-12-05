@@ -17,7 +17,7 @@ get_header(); ?>
 	<div class="container-fluid">
 		<div class="row align-items-center justify-content-center py-2 py-sm-3" id="landing">
 			<div class="col-sm-10 d-none d-sm-block">
-				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-minds.png'; ?>" alt="FIT 75th Anniversary Celebrating unconventional minds">
+				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-minds-2.png'; ?>" alt="FIT 75th Anniversary Celebrating unconventional minds">
 			</div>
 			<div class="col-11 d-sm-none">
 				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-SUNY.png'; ?>" alt="FIT 75th Anniversary">
@@ -80,7 +80,12 @@ if( $posts ):
 								<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
 									<?php $hash = hash("md4", $title); ?>
 									<button type="button" class="modal-button w-100" data-toggle="modal" data-target="#post_<?php echo $hash; ?>">
-										<?php echo get_the_post_thumbnail( $single_post, $size = 'large', array( 'class' => 'w-100' ) ); ?>
+										<?php
+											$medium_large = get_the_post_thumbnail_url($single_post, 'medium_large');
+											$thumbnail_id = get_post_thumbnail_id($single_post);
+											$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+										; ?>
+										<img src="<?php echo $medium_large; ?>" alt="<?php echo $alt; ?>" class="w-100">
 									</button>
 									<div class="modal fade" id="post_<?php echo $hash; ?>" data-fullsize="<?php echo get_the_post_thumbnail_url($single_post, 'full'); ?>" tabindex="-1" role="dialog" aria-label="Label_<?php echo $title; ?>" aria-hidden="true" data-backdrop="true">
 									  <div class="modal-dialog modal-xl modal-dialog-centered">
