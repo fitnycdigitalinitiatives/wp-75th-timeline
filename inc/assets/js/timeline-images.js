@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // lazy load
-  $(".event .image img").lazy();
   // image modals
   if (window.matchMedia("(max-width: 767px)").matches || window.matchMedia("(max-height: 767px)").matches ) {
     $(".modal-button").attr("disabled", true);
