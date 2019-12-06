@@ -8,7 +8,11 @@ $(document).ready(function() {
       $(this).attr("data-toggle", "modal");
       $(this).attr("data-target", "#slide_" + index);
       var slide_img = $("img", this);
-      var fullurl = slide_img.attr("src");
+      if (slide_img.data("full")) {
+        var fullurl = slide_img.data("full");
+      } else {
+        var fullurl = slide_img.attr("src");
+      }
       if (slide_img.parent().is("a")) {
         slide_img.unwrap();
       }
@@ -30,6 +34,7 @@ $(document).ready(function() {
                 </div>
       `;
       $(this).append( modal );
+      $(this).css("cursor", "pointer");
     });
   }
   $(".modal").on("show.bs.modal", function (e) {
