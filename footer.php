@@ -13,13 +13,9 @@
 	</main><!-- #content -->
 	<footer class="mt-auto py-5 text-white text-center">
 	  <div class="container">
-			<div class="row justify-content-center" >
-				<div class="col-12 mb-4" id="unconventional">
-					<h1 class="text-white font-weight-bold">
-						un<span class="grey">conventional</span> then<br>un<span class="grey" id="flip">conventional</span> now
-					</h1>
-				</div>
+			<div class="row justify-content-center">
 	    	<div class="col-md-6 col-lg-5 col-xl-4">
+					<img class="w-100 mb-5 px-2 px-md-0" src="<?php echo get_template_directory_uri() . '/inc/assets/images/unconventionalthennow.png'; ?>" alt="unconventional then, unconventional now">
 					<a class="text-dark d-inline-block mb-4" href="https://www.fitnyc.edu/" id="footer-logo">
 	          <img src="<?php echo get_template_directory_uri() . '/inc/assets/images/fit-wordmark.png'; ?>" alt="FIT SUNY Logo">
 	        </a>
