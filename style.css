@@ -142,6 +142,7 @@ iframe {
 }
 a {
   color: #0067ac;
+  font-weight: bold;
 }
 a:hover, a:focus {
   color: #80b8d7;
