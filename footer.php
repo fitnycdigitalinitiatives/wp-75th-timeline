@@ -29,22 +29,22 @@
 					<ul class="list-inline" id="social">
 			      <li class="list-inline-item">
 							<a class="text-white" href="https://www.instagram.com/fitnyc/" aria-label="FIT Instagram">
-								<i class="fab fa-instagram fa-2x" aria-hidden="" title="FIT Instagram"></i>
+								<i class="fab fa-instagram fa-2x" aria-hidden="true" title="FIT Instagram"></i>
 							</a>
 						</li>
 						<li class="list-inline-item">
 							<a class="text-white" href="https://www.facebook.com/FashionInstituteofTechnology" aria-label="FIT Facebook">
-								<i class="fab fa-facebook fa-2x" aria-hidden="" title="FIT Facebook"></i>
+								<i class="fab fa-facebook fa-2x" aria-hidden="true" title="FIT Facebook"></i>
 							</a>
 						</li>
 						<li class="list-inline-item">
 							<a class="text-white" href="https://twitter.com/FIT" aria-label="FIT Twitter">
-								<i class="fab fa-twitter fa-2x" aria-hidden="" title="FIT Twitter"></i>
+								<i class="fab fa-twitter fa-2x" aria-hidden="true" title="FIT Twitter"></i>
 							</a>
 						</li>
 						<li class="list-inline-item">
 							<a class="text-white" href="https://news.fitnyc.edu/events/" aria-label="FIT Calendar of Events">
-								<i class="fas fa-calendar fa-2x" aria-hidden="" title="FIT Calendar of Events"></i>
+								<i class="fas fa-calendar fa-2x" aria-hidden="true" title="FIT Calendar of Events"></i>
 							</a>
 						</li>
 			    </ul>

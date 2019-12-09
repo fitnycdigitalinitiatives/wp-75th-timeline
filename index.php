@@ -43,7 +43,7 @@ if( $posts ):
 	$grouped[$decade][]	= $post;
 	?>
 <?php	endforeach; ?>
-	<nav class="sticky-top" id="decade-navigation">
+	<nav class="sticky-top" id="decade-navigation" role="navigation" aria-label="Decade Navigation">
 		<ul class="nav nav-justified">
 		<?php	foreach ($grouped as $decade => $grouped_posts) : ?>
 			<li class="nav-item">
