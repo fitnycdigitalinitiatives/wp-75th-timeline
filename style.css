@@ -140,6 +140,12 @@ img {
 iframe {
   width: 100%;
 }
+a {
+  color: #0067ac;
+}
+a:hover, a:focus {
+  color: #80b8d7;
+}
 
 /* Header */
 .navbar {
@@ -154,7 +160,7 @@ iframe {
   transition: min-height 0.1s linear; /* Prevents jumpiness */
 }
 #decade-navigation {
-  background-color: #d6d7d5db;
+  background-color: #d6d7d5eb;
 }
 #decade-navigation .nav-link {
   font-family: "halyard-micro",sans-serif;
@@ -532,9 +538,9 @@ iframe {
   #timeline .event .image.blank:before {
     display: none;
   }
-  #timeline .event:nth-of-type(even) .image {
-    -ms-flex-order: 13;
-    order: 13;
+  #timeline .event:nth-of-type(odd) .image {
+    -ms-flex-order: -1;
+    order: -1;
   }
   #timeline .event .image > * {
     padding-bottom: 0;

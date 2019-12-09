@@ -72,6 +72,14 @@ if( $posts ):
 						$content = str_replace( ']]>', ']]&gt;', $content );
 					?>
 					<div class="row align-items-sm-center justify-content-center justify-content-md-between event my-5 my-md-0 py-md-4">
+						<div class="col-md-5 text p-md-3 p-xl-4 bg-white">
+							<h2 class="title">
+								<?php echo $title; ?>
+							</h2>
+							<?php if (!(has_shortcode( $single_post->post_content, 'espro-slider') || has_block( 'gallery', $single_post ))) : ?>
+								<?php echo $content; ?>
+							<?php endif; ?>
+						</div>
 						<div class="date d-flex align-items-center justify-content-center">
 							<h3><?php	echo get_the_date('Y', $single_post); ?></h3>
 						</div>
@@ -86,6 +94,7 @@ if( $posts ):
 											$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 										; ?>
 										<img src="<?php echo $medium_large; ?>" alt="<?php echo $alt; ?>" class="w-100">
+										<span class="sr-only">Enlarge image</span>
 									</button>
 									<div class="modal fade" id="post_<?php echo $hash; ?>" data-fullsize="<?php echo get_the_post_thumbnail_url($single_post, 'full'); ?>" tabindex="-1" role="dialog" aria-label="Label_<?php echo $title; ?>" aria-hidden="true" data-backdrop="true">
 									  <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -121,14 +130,6 @@ if( $posts ):
 							<div class="col-md-5 image blank m-0 p-0">
 							</div>
 						<?php endif; ?>
-						<div class="col-md-5 text p-md-3 p-xl-4 bg-white">
-							<h2 class="title">
-								<?php echo $title; ?>
-							</h2>
-							<?php if (!(has_shortcode( $single_post->post_content, 'espro-slider') || has_block( 'gallery', $single_post ))) : ?>
-								<?php echo $content; ?>
-							<?php endif; ?>
-						</div>
 					</div>
 				<?php	endforeach; ?>
 				</div>
