@@ -124,10 +124,6 @@ a img.aligncenter {
 body {
   font-family: "halyard-text", sans-serif;
   font-weight: 300;
-  position: relative;
-  color: #3c3c3c;
-}
-#page {
   background-color: #d6d7d5;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -144,10 +140,10 @@ iframe {
   width: 100%;
 }
 a {
-  color: #0067ac;
+  color: #0071EB;
 }
 a:hover, a:focus {
-  color: #80b8d7;
+  color: #006ADB;
 }
 
 /* Header */
@@ -168,10 +164,10 @@ a:hover, a:focus {
 #decade-navigation .nav-link {
   font-family: "halyard-micro",sans-serif;
   font-weight: bold;
-  color: rgba(0,0,0,.5);
+  color: #545D63;
 }
 #decade-navigation .nav-link:focus, #decade-navigation .nav-link:hover {
-  color: rgba(0,0,0,.7);
+  color: #292E32;
 }
 #decade-navigation .nav-link.active, #decade-navigation .nav-link.active:focus, #decade-navigation .nav-link.active:hover {
   color: #212529;
