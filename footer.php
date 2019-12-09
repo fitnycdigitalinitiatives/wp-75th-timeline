@@ -11,7 +11,7 @@
 
 ?>
 	</main><!-- #content -->
-	<footer class="mt-auto py-5 text-white text-center">
+	<footer class="py-5 text-white text-center">
 	  <div class="container">
 			<div class="row justify-content-center">
 	    	<div class="col-md-6 col-lg-5 col-xl-4">

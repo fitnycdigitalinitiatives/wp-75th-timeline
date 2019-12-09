@@ -10,7 +10,7 @@
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="h-100">
+<html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,11 +23,11 @@
 
 <?php $classes = get_body_class(); ?>
 <?php if (in_array('home',$classes)) : ?>
-<body <?php body_class('h-100'); ?> data-spy="scroll" data-target="#decade-navigation" data-offset="0.5">
+<body <?php body_class(); ?> data-spy="scroll" data-target="#decade-navigation" data-offset="0.5">
 <?php else: ?>
-<body <?php body_class('h-100'); ?>>
+<body <?php body_class(); ?>>
 <?php endif; ?>
-<div id="page" class="site d-flex flex-column h-100">
+<div id="page" class="site">
   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'timeline-theme' ); ?></a>
   <header class="flex-shrink-0">
     <nav class="navbar navbar-light navbar-expand-md">

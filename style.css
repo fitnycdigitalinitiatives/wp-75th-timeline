@@ -125,6 +125,8 @@ body {
   font-family: "halyard-text", sans-serif;
   font-weight: 300;
   position: relative;
+}
+#page {
   background-color: #d6d7d5;
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -142,7 +144,6 @@ iframe {
 }
 a {
   color: #0067ac;
-  font-weight: bold;
 }
 a:hover, a:focus {
   color: #80b8d7;
