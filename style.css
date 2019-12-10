@@ -164,16 +164,18 @@ a:hover, a:focus {
 }
 /* Homepage */
 #landing {
-  min-height: calc(100vh - (56px + 40px)); /* Use vh as a fallback for browsers that do not support Custom Properties */
+  min-height: calc(100vh - (56px + 48px)); /* Use vh as a fallback for browsers that do not support Custom Properties */
   transition: min-height 0.1s linear; /* Prevents jumpiness */
 }
 #decade-navigation {
-  background-color: #d6d7d5eb;
+  background-color: #d6d7d5db;
 }
 #decade-navigation .nav-link {
   font-family: "halyard-micro",sans-serif;
   font-weight: bold;
   color: #545D63;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
 }
 #decade-navigation .nav-link:focus, #decade-navigation .nav-link:hover {
   color: #292E32;
