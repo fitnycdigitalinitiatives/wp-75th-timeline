@@ -14,11 +14,12 @@
 
 get_header(); ?>
 
-	<div class="pre-loader">
+	<div class="pre-loader" role="alert" aria-live="polite">
 		<div class="loading-spinner spinner-1"></div>
 		<div class="loading-spinner spinner-2"></div>
 		<div class="loading-spinner spinner-3"></div>
 		<div class="loading-spinner spinner-4"></div>
+		<span class="sr-only">Page is Loading...</span>
 	</div>
 
 	<div class="container-fluid">
