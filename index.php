@@ -14,6 +14,13 @@
 
 get_header(); ?>
 
+	<div class="pre-loader">
+		<div class="loading-spinner spinner-1"></div>
+		<div class="loading-spinner spinner-2"></div>
+		<div class="loading-spinner spinner-3"></div>
+		<div class="loading-spinner spinner-4"></div>
+	</div>
+
 	<div class="container-fluid">
 		<div class="row align-items-center justify-content-center py-2 py-sm-3" id="landing">
 			<div class="col-sm-10 d-none d-sm-block">

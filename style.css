@@ -126,6 +126,77 @@ body {
   font-weight: 300;
   background-color: #d6d7d5;
 }
+.pre-loader {
+  position: fixed;
+	left: 0;
+	top: 0;
+  bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: #d6d7d5;
+}
+.no-js .pre-loader {
+  display: none;
+}
+.loading-spinner {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  opacity: 1;
+}
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+.loading-spinner:before {
+  -webkit-animation: 1.5s linear infinite spinner;
+          animation: 1.5s linear infinite spinner;
+  -webkit-animation-play-state: inherit;
+          animation-play-state: inherit;
+  border: solid 4px #231f20;
+  border-bottom-color: #d6d7d5;
+  border-radius: 50%;
+  content: "";
+  left: 50%;
+  opacity: inherit;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+}
+.spinner-1:before {
+  height: 150px;
+  width: 150px;
+}
+.spinner-2:before {
+  height: 135px;
+  width: 135px;
+}
+.spinner-3:before {
+  height: 120px;
+  width: 120px;
+}
+.spinner-4:before {
+  height: 105px;
+  width: 105px;
+}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: "halyard-micro",sans-serif;
   font-weight: 300;
@@ -177,13 +248,13 @@ a:hover, a:focus {
   padding-top: .75rem;
   padding-bottom: .75rem;
 }
-#decade-navigation .nav-item:nth-of-type(3n+1) .nav-link:focus, #decade-navigation .nav-item:nth-of-type(3n+1) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+1) .nav-link.active {
+#decade-navigation .nav-item:nth-of-type(3n+1) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+1) .nav-link.active {
   color: #0036F9;
 }
-#decade-navigation .nav-item:nth-of-type(3n+2) .nav-link:focus, #decade-navigation .nav-item:nth-of-type(3n+2) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+2) .nav-link.active {
+#decade-navigation .nav-item:nth-of-type(3n+2) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+2) .nav-link.active {
   color: #FF2EAA;
 }
-#decade-navigation .nav-item:nth-of-type(3n) .nav-link:focus, #decade-navigation .nav-item:nth-of-type(3n) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n) .nav-link.active {
+#decade-navigation .nav-item:nth-of-type(3n) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n) .nav-link.active {
   color: #12C477;
 }
 @media (max-width: 767px) {
