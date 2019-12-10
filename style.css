@@ -173,15 +173,18 @@ a:hover, a:focus {
 #decade-navigation .nav-link {
   font-family: "halyard-micro",sans-serif;
   font-weight: bold;
-  color: #545D63;
+  color: #212529;
   padding-top: .75rem;
   padding-bottom: .75rem;
 }
-#decade-navigation .nav-link:focus, #decade-navigation .nav-link:hover {
-  color: #292E32;
+#decade-navigation .nav-item:nth-of-type(3n+1) .nav-link:focus, #decade-navigation .nav-item:nth-of-type(3n+1) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+1) .nav-link.active {
+  color: #0036F9;
 }
-#decade-navigation .nav-link.active, #decade-navigation .nav-link.active:focus, #decade-navigation .nav-link.active:hover {
-  color: #212529;
+#decade-navigation .nav-item:nth-of-type(3n+2) .nav-link:focus, #decade-navigation .nav-item:nth-of-type(3n+2) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+2) .nav-link.active {
+  color: #FF2EAA;
+}
+#decade-navigation .nav-item:nth-of-type(3n) .nav-link:focus, #decade-navigation .nav-item:nth-of-type(3n) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n) .nav-link.active {
+  color: #12C477;
 }
 @media (max-width: 767px) {
   #decade-navigation .nav {
