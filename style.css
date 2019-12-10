@@ -388,6 +388,10 @@ a:hover, a:focus {
   padding: 15px;
   padding-bottom: 0;
 }
+#timeline .event .image {
+  -ms-flex-order: -1;
+  order: -1;
+}
 #timeline .event .text {
   padding: 15px;
 }
@@ -546,9 +550,9 @@ a:hover, a:focus {
   #timeline .event .image.blank:before {
     display: none;
   }
-  #timeline .event:nth-of-type(odd) .image {
-    -ms-flex-order: -1;
-    order: -1;
+  #timeline .event:nth-of-type(even) .image {
+    -ms-flex-order: 13;
+    order: 13;
   }
   #timeline .event .image > * {
     padding-bottom: 0;
