@@ -27,7 +27,7 @@ get_header(); ?>
 			<div class="col-sm-10 d-none d-sm-block">
 				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-minds-2.png'; ?>" alt="FIT 75th Anniversary Celebrating unconventional minds">
 			</div>
-			<div class="col-11 d-sm-none">
+			<div class="col-9 d-sm-none">
 				<img class="img-responsive"src="<?php echo get_template_directory_uri() . '/inc/assets/images/75th-SUNY.png'; ?>" alt="FIT 75th Anniversary">
 				<img class="img-responsive mt-4"src="<?php echo get_template_directory_uri() . '/inc/assets/images/celebrating.png'; ?>" alt="Celebrating unconventional minds">
 			</div>
@@ -52,12 +52,15 @@ if( $posts ):
 	?>
 <?php	endforeach; ?>
 	<nav class="sticky-top" id="decade-navigation" role="navigation" aria-label="Decade Navigation">
-		<ul class="nav nav-justified">
+		<ul class="nav nav-fill">
 		<?php	foreach ($grouped as $decade => $grouped_posts) : ?>
 			<li class="nav-item">
 		    <a class="nav-link scroll-link" href="#decade<?php echo $decade; ?>"><?php	echo $decade; ?></a>
 		  </li>
 		<?php	endforeach; ?>
+			<li class="nav-item">
+				<a class="nav-link scroll-link top" href="#top" aria-label="Back to top"><i class="fas fa-angle-double-up" aria-hidden="true" title="Back to top"></i></a>
+			</li>
 		</ul>
 	</nav>
 

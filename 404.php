@@ -9,30 +9,14 @@
 
 get_header(); ?>
 
-	<div class="container mt-5">
+	<div class="container my-5 error-404 not-found">
 		<div class="row justify-content-center">
-			<section id="primary" class="content-area col-sm-12 col-lg-8">
-				<main id="main" class="site-main" role="main">
-
-					<section class="error-404 not-found">
-						<header class="page-header">
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'timeline-theme' ); ?></h1>
-						</header><!-- .page-header -->
-
-						<div class="page-content">
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'timeline-theme' ); ?></p>
-
-							<?php
-								get_search_form();
-
-
-							?>
-
-						</div><!-- .page-content -->
-					</section><!-- .error-404 -->
-
-				</main><!-- #main -->
-			</section><!-- #primary -->
+			<div class="col-md-8 col-lg-6">
+				<h1 class="mb-4 text-center display-4">
+					Sorry!
+				</h1>
+				<p>It appears you have reached this page in error. We're not exactly sure how this happened, but let's get you back to our wonderful <a href="<?php echo home_url(); ?>">timeline</a> as soon as possible.</p>
+			</div>
 		</div><!-- .row -->
 	</div><!-- .container -->
 

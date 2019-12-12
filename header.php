@@ -10,7 +10,7 @@
  */
 
 ?><!DOCTYPE html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html class="no-js h-100" <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,14 +23,17 @@
 
 <?php $classes = get_body_class(); ?>
 <?php if (in_array('home',$classes)) : ?>
-<body <?php body_class(); ?> data-spy="scroll" data-target="#decade-navigation" data-offset="0.5">
+<body <?php body_class('d-flex flex-column h-100'); ?> data-spy="scroll" data-target="#decade-navigation" data-offset="0.5">
 <?php else: ?>
-<body <?php body_class(); ?>>
+<body <?php body_class('d-flex flex-column h-100'); ?>>
 <?php endif; ?>
-<div id="page" class="site">
-  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'timeline-theme' ); ?></a>
-  <header class="flex-shrink-0">
-    <nav class="navbar navbar-light navbar-expand-md" role="navigation" aria-label="Main">
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'timeline-theme' ); ?></a>
+<header class="flex-shrink-0" id="top">
+  <nav class="navbar navbar-light navbar-expand-lg" role="navigation" aria-label="Main">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold" href="<?php echo home_url(); ?>">
+        75th Anniversary Timeline
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,7 +43,7 @@
       'theme_location'    => 'primary',
       'container'       => 'div',
       'container_id'    => 'main-nav',
-      'container_class' => 'collapse navbar-collapse justify-content-end',
+      'container_class' => 'collapse navbar-collapse',
       'menu_id'         => false,
       'menu_class'      => 'navbar-nav ml-auto',
       'depth'           => 3,
@@ -48,6 +51,7 @@
       'walker'          => new wp_bootstrap_navwalker()
       ));
       ?>
-    </nav>
-  </header>
-  <main class="flex-shrink-0" id="content">
+    </div>
+  </nav>
+</header>
+<main class="flex-shrink-0" id="content">

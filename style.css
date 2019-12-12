@@ -221,8 +221,21 @@ a:hover, a:focus {
 .navbar {
   background-color: #d6d7d5;
 }
-.navbar-brand img {
-  height: 40px;
+.navbar .navbar-brand {
+  color: #212529;
+}
+.navbar .navbar-toggler {
+  border: none;
+  padding: 10px 0;
+}
+.navbar .navbar-toggler:focus {
+  outline: none;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  display: block;
+  background-image: url(inc/assets/images/nav-button.png);
+  height: 20px;
+  width: 40px;
 }
 .navbar-light .navbar-nav .nav-link {
   color: #545D63;
@@ -236,7 +249,6 @@ a:hover, a:focus {
 /* Homepage */
 #landing {
   min-height: calc(100vh - (56px + 48px)); /* Use vh as a fallback for browsers that do not support Custom Properties */
-  transition: min-height 0.1s linear; /* Prevents jumpiness */
 }
 #decade-navigation {
   background-color: #d6d7d5db;
@@ -248,14 +260,20 @@ a:hover, a:focus {
   padding-top: .75rem;
   padding-bottom: .75rem;
 }
-#decade-navigation .nav-item:nth-of-type(3n+1) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+1) .nav-link.active {
+#decade-navigation .nav-link:hover {
+  color: #000;
+}
+#decade-navigation .nav-item:nth-of-type(3n+1) .nav-link.active {
   color: #0036F9;
 }
-#decade-navigation .nav-item:nth-of-type(3n+2) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n+2) .nav-link.active {
+#decade-navigation .nav-item:nth-of-type(3n+2) .nav-link.active {
   color: #FF2EAA;
 }
-#decade-navigation .nav-item:nth-of-type(3n) .nav-link:hover, #decade-navigation .nav-item:nth-of-type(3n) .nav-link.active {
+#decade-navigation .nav-item:nth-of-type(3n) .nav-link.active {
   color: #12C477;
+}
+#decade-navigation .nav-item .nav-link.top.active {
+  color: #212529;
 }
 @media (max-width: 767px) {
   #decade-navigation .nav {
