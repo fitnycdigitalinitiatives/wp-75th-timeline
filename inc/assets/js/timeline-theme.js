@@ -84,6 +84,11 @@ $(document).ready(function() {
     `;
     $(this).parent().html(iframe);
   });
+
+  setTimeout(function(){
+    $(".pre-loader").fadeOut("slow", function() {
+    });
+  }, 4000);
 });
 
 $(window).on("load",function(){
