@@ -85,13 +85,6 @@ $(document).ready(function() {
     $(this).parent().html(iframe);
   });
 
-  setTimeout(function(){
-    $(".pre-loader").fadeOut("slow", function() {
-    });
-  }, 4000);
-});
-
-$(window).on("load",function(){
   // Fade out loading animation and update screen reader text
   $(".pre-loader").fadeOut("slow", function() {
     $(".pre-loader .sr-only").text("Page is loaded.");
