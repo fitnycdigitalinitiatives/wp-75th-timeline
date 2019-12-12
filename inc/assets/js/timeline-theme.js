@@ -84,11 +84,11 @@ $(document).ready(function() {
     `;
     $(this).parent().html(iframe);
   });
-
+  // Fade out loading animation after 3 seconds or if page loads first
   setTimeout(function(){
     $(".pre-loader").fadeOut("slow", function() {
     });
-  }, 4000);
+  }, 3000);
 });
 
 $(window).on("load",function(){
