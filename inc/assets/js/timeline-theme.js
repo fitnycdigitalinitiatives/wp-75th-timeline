@@ -19,7 +19,7 @@ $(document).ready(function() {
     }
     initialouterHeight = currentouterHeight;
   });
-  // end fullscreen fix 
+  // end fullscreen fix
 
   //Scroll animation and offset
   $('a.scroll-link').on("click", function(event) {
@@ -75,6 +75,15 @@ $(document).ready(function() {
     });
   }
   // image modal end
+
+  // load YouTube iframe
+  $('.play-button').on("click", function(event) {
+    var youtube_id = $(this).parent().data("youtube-id");
+    var iframe = `
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/` + youtube_id + `" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    `;
+    $(this).parent().html(iframe);
+  });
 });
 
 $(window).on("load",function(){

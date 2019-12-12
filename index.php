@@ -127,10 +127,13 @@ if( $posts ):
 									<?php echo get_the_post_thumbnail( $single_post, $size = 'large', array( 'class' => 'w-100', 'data-fullsize' => get_the_post_thumbnail_url($single_post, 'full') ) ); ?>
 								</div>
 							<?php endif; ?>
-						<?php elseif ((has_post_format( 'video', $single_post )) && ($key_1_value = get_post_meta( $single_post->ID, 'video', true ))) : ?>
+						<?php elseif ((has_post_format( 'video', $single_post )) && ($youtube_id = get_post_meta( $single_post->ID, 'youtube-id', true ))) : ?>
 							<div class="col-md-5 image p-md-3 p-xl-4 bg-white">
-								<div class="embed-responsive embed-responsive-16by9">
-									<?php echo $key_1_value; ?>
+								<div class="embed-responsive embed-responsive-16by9 youtube" data-youtube-id="<?php echo $youtube_id; ?>">
+									<button class="play-button" aria-label="Load YouTube Video">
+										<i class="fas fa-play" aria-hidden="true" title="Load YouTube Video"></i>
+									</button>
+									<img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/sddefault.jpg" alt="<?php echo $title; ?>" class="w-100 embed-responsive-item">
 								</div>
 							</div>
 						<?php elseif (has_shortcode( $single_post->post_content, 'espro-slider') || has_block( 'gallery', $single_post )) : ?>

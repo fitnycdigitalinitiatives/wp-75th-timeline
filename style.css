@@ -489,6 +489,31 @@ a:hover, a:focus {
 #timeline .event .text {
   padding: 15px;
 }
+#timeline .event .image .youtube img.embed-responsive-item {
+  object-fit: cover;
+}
+#timeline .event .image .youtube .play-button {
+  position: absolute;
+  top: 50%;
+	left: 50%;
+	transform: translate3d( -50%, -50%, 0 );
+  z-index: 1;
+  border: none;
+  padding: 0;
+  width: 90px;
+  height: 60px;
+  background-color: #333;
+  box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+  opacity: 0.8;
+  border-radius: 6px;
+}
+#timeline .event .image .youtube .play-button:hover {
+  opacity: 1;
+}
+#timeline .event .image .youtube .play-button i {
+  font-size: 1.5rem;
+  color: #fff;
+}
 #timeline .event .image .flexslider {
   margin-bottom: .5rem;
 }
