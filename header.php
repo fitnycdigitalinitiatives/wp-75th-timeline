@@ -31,7 +31,7 @@
 <header class="flex-shrink-0" id="top">
   <nav class="navbar navbar-light navbar-expand-lg" role="navigation" aria-label="Main">
     <div class="container-fluid">
-      <a class="navbar-brand font-weight-bold" href="<?php echo home_url(); ?>">
+      <a class="navbar-brand font-weight-bold mr-0" href="<?php echo home_url(); ?>">
         75th Anniversary Timeline
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
