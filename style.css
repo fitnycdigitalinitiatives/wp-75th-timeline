@@ -3,7 +3,7 @@ Theme Name: Timeline Theme
 Theme URI:
 Author: FIT Library Digital Initiatives
 Author URI: https://github.com/fitnycdigitalinitiatives
-Description:  Wordpress theme built for FIT's 75th Anniversary.
+Description:  Wordpress theme built for FIT's 75th Anniversary. Please note that YouTube videos need to be added by including a custom field of 'youtube-id' in the post with the video's id, e.g. YKT91xipt-E. The post format must be set as 'video'. This theme also works specifically with the Image Slider (Lite) plugin.
 Version: 1.0
 Text Domain: timeline-theme
 Tags: timelines
