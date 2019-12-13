@@ -233,7 +233,7 @@ a:hover, a:focus {
 }
 .navbar .navbar-toggler .navbar-toggler-icon {
   display: block;
-  background-image: url(inc/assets/images/nav-button.png);
+  background-image: url('inc/assets/images/nav-button.png');
   height: 20px;
   width: 40px;
 }
@@ -304,7 +304,7 @@ a:hover, a:focus {
       rgba(0, 54, 249, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/1940s-bg.jpg);
+    url('inc/assets/images/1940s-bg.jpg');
 }
 #timeline #decade1950s .decade {
   background-image:
@@ -314,7 +314,7 @@ a:hover, a:focus {
       rgba(255, 46, 170, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/1950s-bg.jpg);
+    url('inc/assets/images/1950s-bg.jpg');
 }
 #timeline #decade1960s .decade {
   background-image:
@@ -324,7 +324,7 @@ a:hover, a:focus {
       rgba(18, 196, 119, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/1960s-bg.jpg);
+    url('inc/assets/images/1960s-bg.jpg');
 }
 #timeline #decade1970s .decade {
   background-image:
@@ -334,7 +334,7 @@ a:hover, a:focus {
       rgba(0, 54, 249, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/1970s-bg.jpg);
+    url('inc/assets/images/1970s-bg.jpg');
 }
 #timeline #decade1980s .decade {
   background-image:
@@ -344,7 +344,7 @@ a:hover, a:focus {
       rgba(255, 46, 170, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/1980s-bg.jpg);
+    url('inc/assets/images/1980s-bg.jpg');
 }
 #timeline #decade1990s .decade {
   background-image:
@@ -354,7 +354,7 @@ a:hover, a:focus {
       rgba(18, 196, 119, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/1990s-bg.jpg);
+    url('inc/assets/images/1990s-bg.jpg');
 }
 #timeline #decade2000s .decade {
   background-image:
@@ -364,7 +364,7 @@ a:hover, a:focus {
       rgba(0, 54, 249, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/2000s-bg.jpg);
+    url('inc/assets/images/2000s-bg.jpg');
 }
 #timeline #decade2010s .decade {
   background-image:
@@ -374,7 +374,7 @@ a:hover, a:focus {
       rgba(255, 46, 170, 0.45)
     ),
     /* bottom, image */
-    url(inc/assets/images/2010s-bg.jpg);
+    url('inc/assets/images/2010s-bg.jpg');
 }
 #timeline .decade:before {
   position: absolute;
@@ -382,7 +382,7 @@ a:hover, a:focus {
   left: 0;
   width: 45%;
   height: 100%;
-  background: url(inc/assets/images/corner-tl.png);
+  background: url('inc/assets/images/corner-tl.png');
   background-size: contain;
   background-repeat: no-repeat;
   content: '';
@@ -399,7 +399,7 @@ a:hover, a:focus {
   right: 0;
   width: 45%;
   height: 100%;
-  background: url(inc/assets/images/corner-br.png);
+  background: url('inc/assets/images/corner-br.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -435,7 +435,7 @@ a:hover, a:focus {
   left: 15px;
   width: 42px;
   height: 100%;
-  background: url(inc/assets/images/stripes.png);
+  background: url('inc/assets/images/stripes.png');
   background-size: contain;
   background-repeat: repeat-y;
   content: '';
