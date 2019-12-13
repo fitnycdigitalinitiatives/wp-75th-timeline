@@ -49,7 +49,7 @@
 					</li>
 		    </ul>
 				<p>
-					This site is an initiative of FIT Communications and External Relations and the <a class="text-white" href="https://www.fitnyc.edu/library/">FIT Library</a>.
+					This site is an initiative of the <a class="text-white" href="https://www.fitnyc.edu/library/">FIT Library</a> and FIT Communications and External Relations.
 				</p>
 				<p class="mb-0" id="copyright">
 					&copy;<?php echo date("Y"); ?> Fashion Institute of Technology
